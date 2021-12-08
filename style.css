@@ -27,11 +27,16 @@ h1
   margin: 0;
   color: var(--dark);
   line-height: 0.5;
- 
-}
+ }
+ main {
+  margin: 20px auto;
+  width: 94%;
+} 
+
 .hero {
   padding: 3% 4%;
   background-color: rgb(37, 37, 128);
+  background-image: webkit-linear-gradient();
   color: var(--primary);
 }
 
@@ -49,8 +54,14 @@ h1
   margin: 0 0 20px 0;
   border: 3px solid var(--dark);
   border-radius: var(--border-radius);
+  
 }
 .flex-row {
   display: flex;
+  flex-wrap: wrap;
+}
+.flex-column {
+  display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
 }
