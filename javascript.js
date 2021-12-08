@@ -35,7 +35,8 @@ function searchWeatherApi(event) {
                     var humidity = $("<p>").text(`Humidity :${data.current.humidity
                     }`);
                     cityContainer.append(humidity);
-                    
+                    var uvIndex = $("<p>").text(`UV Index :${data.current.uvi}`);
+                    cityContainer.append(uvIndex);
 
                 });
         });
