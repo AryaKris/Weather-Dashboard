@@ -1,8 +1,6 @@
 :root {
-  /* --primary: #ccdad1; */
+
   --secondary: #9caea9;
-  /* --tertiary: #788585; */
-  /* --light-dark: #6f6866; */
   --dark: hsl(240, 8%, 91%);
   --border-radius: 0.3rem;
 }
@@ -54,6 +52,7 @@ h1
   margin: 0 0 20px 0;
   border: 3px solid var(--dark);
   border-radius: var(--border-radius);
+  color: blue;
   
 }
 .flex-row {
@@ -64,4 +63,21 @@ h1
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+}
+.blue{
+color:blue;
+
+}
+
+
+/* #city-container{
+  
+margin: auto;
+width: 60%;
+border: 5px solid #FFFF00;
+padding: 10px;
+
+} */
+.list-group {
+  flex: 0 0 calc(100% * 8 / 12 - 2%);
 }

@@ -26,16 +26,17 @@ function searchWeatherApi(event) {
                     console.log(data);
                     var cityContainer = $("#city-container")
                     //creating p tag to display the temperature, wind, humidity, UV index
-                    var temp = $("<p>").text(`Temp: ${data.current.temp}F`); //.addClass()
+                    var temp = $("<p>").text(`Temp: ${data.current.temp}F`).addClass("blue"); //.addClass()
                     cityContainer.append(temp);
 
-                    var wind = $("<p>").text(`Wind :${data.current.wind_speed}mph`);
+                    var wind = $("<p>").text(`Wind :${data.current.wind_speed}mph`).addClass("blue");
                     cityContainer.append(wind);
 
                     var humidity = $("<p>").text(`Humidity :${data.current.humidity
-                    }`);
+                        }`).addClass("blue");
                     cityContainer.append(humidity);
-                    var uvIndex = $("<p>").text(`UV Index :${data.current.uvi}`);
+                    
+                    var uvIndex = $("<p>").text(`UV Index :${data.current.uvi}`).addClass("blue");
                     cityContainer.append(uvIndex);
 
                 });
