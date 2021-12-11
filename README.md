@@ -3,3 +3,4 @@ In order  to see the weather outlook for multiple cities building a weather dash
 
 # HTML and CSS
 Since there was no starter code for this assignment the first step was to create an HTML file and do the basic CSS styling. 
+# Search Button

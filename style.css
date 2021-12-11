@@ -10,7 +10,6 @@
 }
 
 body {
-  background-color: var(--primary);
   margin: 0;
   padding: 0;
   font-family: 'IBM Plex Sans', sans-serif;
@@ -19,13 +18,13 @@ body {
   font-size: 16px;
 }
 h1
-
  {
   font-weight: 700;
   margin: 0;
   color: var(--dark);
   line-height: 0.5;
  }
+ 
  main {
   margin: 20px auto;
   width: 94%;
@@ -40,7 +39,6 @@ h1
 
 .app-title {
   font-size: 2rem;
-  background-color: var(--primary);
   color: var(--dark);
   padding: 0 10px;
   display: inline-block;
@@ -52,9 +50,8 @@ h1
   margin: 0 0 20px 0;
   border: 3px solid var(--dark);
   border-radius: var(--border-radius);
-  color: blue;
-  
 }
+
 .flex-row {
   display: flex;
   flex-wrap: wrap;
@@ -64,20 +61,8 @@ h1
   flex-direction: column;
   flex-wrap: wrap;
 }
-.blue{
-color:blue;
 
-}
-
-
-/* #city-container{
-  
-margin: auto;
-width: 60%;
-border: 5px solid #FFFF00;
-padding: 10px;
-
-} */
-.list-group {
-  flex: 0 0 calc(100% * 8 / 12 - 2%);
+.lead{
+  color:aliceblue;
+  text-align: center;
 }
