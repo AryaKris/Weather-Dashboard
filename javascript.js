@@ -33,7 +33,7 @@ function searchWeatherApi(event) {
                 })
                 .then(function (forecastWeather) {
                     console.log("forecastWeather: ", forecastWeather);
-                    // retrieving the currentweather-container html here. that should not be the case
+                    // retrieving the currentweather-container html here. 
                     var weatherIcon = $("<img>");
                     weatherIcon.attr(
                         "src",
@@ -64,31 +64,37 @@ function searchWeatherApi(event) {
                     $("#current-uv").append(uvIndex);
                     
                     $("#fivedayweather-container").show();
-                    var futureWeather = $("#fivedayweather-container");
+                    // var futureWeather = $("#fivedayweather-container");
                     
                     // get the  DAILY weather array in a variable from the data json object.
                     var dailyWeatherArr = forecastWeather.daily;
-                     // Loop through each of the object from that array using the for loop
-                    // eg: https://stackoverflow.com/questions/9991805/javascript-how-to-parse-json-array
-                        // inside the for loop, add a div element with col class. that will be one column.
-                        // put the data here for first day
-                        // go to the next day using the loop and continue
-                    for (var i = 0; i < 4; i++) {
+                    // Loop through each of the object from that array using the for loop
+                    // inside the for loop, add a div element with col class. that will be one column.
+                        
+                    for (var i = 1; i <5; i++) {
 
-                        // forcast-day-01-date
-                        var date = "Temp: " + dailyWeatherArr[i].temp.day + "˚F";
-                        var j = i + 1;                     
+                        var j = i;                     
                         var staticDayVal = "#forcast-day-" + j+ "-";
                         console.log("staticDayVal: ", staticDayVal);
-                        var date = staticDayVal + "date";
-                        // $("#forcast-day-0"+ i + "-date").empty();
-                        $(date).empty();
-                        $(date).append();
+                        // forcast-day-01-date
+                        var htmlElementDate = staticDayVal + "date";
+
+                        // convert date from epoch to date
+                        var date = new Date(dailyWeatherArr[i].dt * 1000);
+                        var day = date.getDate();
+                        var month = date.getMonth();
+                        var year = date.getFullYear();
+                        var fullDate = day + "/" + (month + 1) + "/" + year;
+
+                        $(htmlElementDate).empty();
+                        $(htmlElementDate).append(fullDate);
 
                         var temperature = staticDayVal + "temperature";
                         var futureTemp = "Temp: " + dailyWeatherArr[i].temp.day + "˚F";
                         $(temperature).empty();
                         $(temperature).append(futureTemp);
+
+                        
                     }
                 });
         })
