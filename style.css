@@ -66,3 +66,10 @@ h1
   color:aliceblue;
   text-align: center;
 }
+
+#fiveday-forecast-data
+{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
