@@ -71,11 +71,10 @@ function searchWeatherApi(event) {
                     // Loop through each of the object from that array using the for loop
                     // inside the for loop, add a div element with col class. that will be one column.
                         
-                    for (var i = 1; i <5; i++) {
+                    for (var i = 1; i <6; i++) {
 
                         var j = i;                     
                         var staticDayVal = "#forcast-day-" + j+ "-";
-                        console.log("staticDayVal: ", staticDayVal);
                         // forcast-day-01-date
                         var htmlElementDate = staticDayVal + "date";
 
@@ -94,7 +93,20 @@ function searchWeatherApi(event) {
                         $(temperature).empty();
                         $(temperature).append(futureTemp);
 
-                        
+                        var hum = staticDayVal + "humidity";
+                        var futureHum = "humidity :" + dailyWeatherArr[i].humidity;
+                        $(hum).empty();
+                        $(hum).append(futureHum);
+
+                        var wind1 = staticDayVal + "wind";
+                        var futureWind = "Wind :" + dailyWeatherArr[i].wind_speed;
+                        $(wind1).empty();
+                        $(wind1).append(futureWind);
+
+                        var uvIdx = staticDayVal + "uv";
+                        var futureUvindex = "UV Index : " + dailyWeatherArr[i].uvi;
+                        $(uvIdx).empty();
+                        $(uvIdx).append(futureUvindex);
                     }
                 });
         })
