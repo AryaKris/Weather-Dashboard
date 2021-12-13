@@ -7,18 +7,38 @@ var dd = String(today.getDate()).padStart(2, '0');
 var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
 var yyyy = today.getFullYear();
 today = mm + '/' + dd + '/' + yyyy;
+populateCityList();
 
-var cityList = localStorage.getItem("cityList");
-if (cityList != null || cityList != undefined) {
-    for (var j = 0; j < cityList.length; j++) {
-        $("#city-list").append(cityList[j]);
+function populateCityList() {
+    $("#city-list").empty();
+    var cityList = JSON.parse(localStorage.getItem("cityList"));
+    console.log(cityList);
+
+    if (cityList != null || cityList != undefined) {
+        console.log(cityList.length);
+        for (var j = 0; j < cityList.length; j++) {
+            var cityListEntry = $("<button>");
+            cityListEntry.addClass("list-group-item list-group-item-action");
+            console.log(cityList[j]);
+            cityListEntry.text(cityList[j].toUpperCase());
+            $("#city-list").append(cityListEntry);
+        }
     }
 }
 
 $("#user-form").on("submit", searchWeatherApi);
 
+$("#city-list").on("click", "button", function (event) {
+    event.preventDefault();
+    var cityName = $(this).text();
+    var weatherJsonData = JSON.parse(localStorage.getItem(cityName));
+    displayForecast(weatherJsonData);
+
+});
+
 function searchWeatherApi(event) {
     event.preventDefault();
+    populateCityList();
     var cityName = $("#cityname").val();
     var url1 = "";
     if (cityName != '') {
@@ -42,21 +62,21 @@ function searchWeatherApi(event) {
                     var cities = JSON.parse(localStorage.getItem("cityList"));
                     if (cities != undefined) {
                         // preventing duplication of localstorage
-                        if (cities.indexOf(cityName) == -1){
-                            cities.push(cityName);
+                        if (cities.indexOf(cityName.toUpperCase()) == -1) {
+                            cities.push(cityName.toUpperCase());
                         }
                     }
                     else {
                         var cities = [];
-                        cities.push(cityName);
+                        cities.push(cityName.toUpperCase());
                     }
                     localStorage.setItem("cityList", JSON.stringify(cities));
 
                     // Concatenate the currentweather and forecastweather into one single json
                     // Push the combined json to localstorage
                     var weatherData = $.extend(currentWeather, forecastWeather);
-                    localStorage.setItem(cityName, JSON.stringify(weatherData));
-                    displayForecast(JSON.parse(localStorage.getItem(cityName)));
+                    localStorage.setItem(cityName.toUpperCase(), JSON.stringify(weatherData));
+                    displayForecast(JSON.parse(localStorage.getItem(cityName.toUpperCase())));
                 });
         })
         .catch(function (error) {
@@ -96,19 +116,16 @@ function displayForecast(weatherData) {
     var uvIndex = "UV Index : " + weatherData.current.uvi;
     // if else conditions for showing the conditions are favorable, moderate, or severe
     if (weatherData.current.uvi < 2) {
-        $("#current-uv").addClass ("btn-success");
+        $("#current-uv").addClass("btn-success");
     }
-    else if (weatherData.current.uvi <= 5){
+    else if (weatherData.current.uvi <= 5) {
         $("#current-uv").addClass("btn-warning");
-    } 
-    else if (weatherData.current.uvi >5){
+    }
+    else if (weatherData.current.uvi > 5) {
         $("#current-uv").addClass("btn-danger");
     }
     $("#current-uv").empty();
     $("#current-uv").append(uvIndex);
-
-   
-
 
     $("#fivedayweather-container").show();
     // var futureWeather = $("#fivedayweather-container");
@@ -130,7 +147,7 @@ function displayForecast(weatherData) {
         var day = date.getDate();
         var month = date.getMonth();
         var year = date.getFullYear();
-        var fullDate = (month + 1) + "/" + day + "/" + year;
+        var fullDate = day + "/" + (month + 1) + "/" + year;
 
         $(htmlElementDate).empty();
         $(htmlElementDate).append(fullDate);
