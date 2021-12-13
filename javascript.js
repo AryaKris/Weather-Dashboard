@@ -119,6 +119,17 @@ function displayForecast(weatherData) {
         $(htmlElementDate).empty();
         $(htmlElementDate).append(fullDate);
 
+        //forecast-day-01-weathericon
+        var futureWeathericon = staticDayVal + "weathericon";
+        var forecastWeatherIcon = $("<img>");
+        forecastWeatherIcon.attr(
+            "src",
+            "https://openweathermap.org/img/w/" +
+            weatherData.daily[i].weather[0].icon + ".png"
+        );
+        $(futureWeathericon).empty();
+        $(futureWeathericon).append(forecastWeatherIcon);
+
         var temperature = staticDayVal + "temperature";
         var futureTemp = "Temp: " + dailyWeatherArr[i].temp.day + "˚F";
         $(temperature).empty();
