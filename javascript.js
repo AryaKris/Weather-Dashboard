@@ -41,6 +41,7 @@ function searchWeatherApi(event) {
                     // retrieve and add the new city to localstorage list
                     var cities = JSON.parse(localStorage.getItem("cityList"));
                     if (cities != undefined) {
+                        // preventing duplication of localstorage
                         if (cities.indexOf(cityName) == -1){
                             cities.push(cityName);
                         }
