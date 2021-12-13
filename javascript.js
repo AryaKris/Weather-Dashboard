@@ -130,7 +130,7 @@ function displayForecast(weatherData) {
         var day = date.getDate();
         var month = date.getMonth();
         var year = date.getFullYear();
-        var fullDate = day + "/" + (month + 1) + "/" + year;
+        var fullDate = (month + 1) + "/" + day + "/" + year;
 
         $(htmlElementDate).empty();
         $(htmlElementDate).append(fullDate);
