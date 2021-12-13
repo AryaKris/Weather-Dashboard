@@ -13,4 +13,7 @@ WHile searching for the current weather conditions for thi city the user should 
 # UV - Index button
 The UV Index button is supposed to change the color indicating whether the conditions are favorable, moderate, or severe.
 
+# Storage
+The search history should be displayed as buttons below the search form and on clicking on a city in the search history urrent and future conditions for that city should be presented. 
+
 
