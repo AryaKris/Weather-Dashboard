@@ -32,11 +32,13 @@
               </div>
               <button id="search-button" type="submit" class="btn btn-primary"><i class="fas fa-search"></i></button>
             </form>
+            <p id="error-message" class="text-danger"></p>
           </div>
           <div>
             <ul id="city-list" class="list-group"></ul>
           </div>
         </div>
+
 
         <div class="col">
           <!-- There needs to be an empty HTML element for us to write weather data to. -->
@@ -61,7 +63,7 @@
           <div id="fivedayweather-container" class="row">
             <div id="fivedayweather" class="col-12 bg-info">
               <h4 class="lead">5-Day Forecast:</h4>
-              <div class="row" id="fiveday-forecast-data">                
+              <div class="row" id="fiveday-forecast-data">
                 <div class="card forecast col-md-2 bg-info">
                   <div id="forecast-day-1" class="card-body">
                     <div id="forcast-day-1-dateicon">
@@ -70,7 +72,6 @@
                     <p id="forcast-day-1-temperature" class="card-text"></p>
                     <p id="forcast-day-1-humidity" class="card-text"></p>
                     <p id="forcast-day-1-wind" class="card-text"></p>
-                    <p id="forcast-day-1-uv" class="card-text btn btn-danger"></p>
                   </div>
                 </div>
                 <div class="card forecast col-2 bg-info">
@@ -81,46 +82,42 @@
                     <p id="forcast-day-2-temperature" class="card-text"></p>
                     <p id="forcast-day-2-humidity" class="card-text"></p>
                     <p id="forcast-day-2-wind" class="card-text"></p>
-                    <p id="forcast-day-2-uv" class="card-text btn btn-danger"></p>
                   </div>
                 </div>
                 <div class="card forecast col-2 bg-info">
                   <div id="forecast-day-3" class="card-body">
-                <div id="forcast-day-3-dateicon">
-                  <span id="forcast-day-3-date"></span>
-                </div>
-                <p id="forcast-day-3-temperature" class="card-text"></p>
-                <p id="forcast-day-3-humidity" class="card-text"></p>
-                <p id="forcast-day-3-wind" class="card-text"></p>
-                <p id="forcast-day-3-uv" class="card-text btn btn-danger"></p>
-                </div>
+                    <div id="forcast-day-3-dateicon">
+                      <span id="forcast-day-3-date"></span>
+                    </div>
+                    <p id="forcast-day-3-temperature" class="card-text"></p>
+                    <p id="forcast-day-3-humidity" class="card-text"></p>
+                    <p id="forcast-day-3-wind" class="card-text"></p>
+                  </div>
                 </div>
                 <div class="card forecast col-2 bg-info">
                   <div id="forecast-day-4" class="card-body">
                     <div id="forcast-day-3-dateicon">
-                    <span id="forcast-day-4-date"></span>
-                  </div>
-                  <p id="forcast-day-4-temperature" class="card-text"></p>
-                  <p id="forcast-day-4-humidity" class="card-text"></p>
-                  <p id="forcast-day-4-wind" class="card-text"></p>
-                  <p id="forcast-day-4-uv" class="card-text btn btn-danger"></p>
+                      <span id="forcast-day-4-date"></span>
+                    </div>
+                    <p id="forcast-day-4-temperature" class="card-text"></p>
+                    <p id="forcast-day-4-humidity" class="card-text"></p>
+                    <p id="forcast-day-4-wind" class="card-text"></p>
                   </div>
                 </div>
                 <div class="card forecast col-2 bg-info">
                   <div id="forecast-day-5" class="card-body">
-                  <div id="forcast-day-5-dateicon">
-                    <span id="forcast-day-5-date"></span>
+                    <div id="forcast-day-5-dateicon">
+                      <span id="forcast-day-5-date"></span>
+                    </div>
+                    <p id="forcast-day-5-temperature" class="card-text"></p>
+                    <p id="forcast-day-5-humidity" class="card-text"></p>
+                    <p id="forcast-day-5-wind" class="card-text"></p>
                   </div>
-                  <p id="forcast-day-5-temperature" class="card-text"></p>
-                  <p id="forcast-day-5-humidity" class="card-text"></p>
-                  <p id="forcast-day-5-wind" class="card-text"></p>
-                  <p id="forcast-day-5-uv" class="card-text btn btn-danger"></p>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
   </main>
   <!-- importing Jquery  -->
