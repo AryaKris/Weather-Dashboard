@@ -16,4 +16,11 @@ The UV Index button is supposed to change the color indicating whether the condi
 # Storage
 The search history should be displayed as buttons below the search form and on clicking on a city in the search history urrent and future conditions for that city should be presented. 
 
+# Image 
+
+![alt text](https://github.com/AryaKris/Weather-Dashboard/blob/main/Screen%20Shot%202021-12-13%20at%2011.11.55.png)
+
+# Link to deployed application 
+https://aryakris.github.io/Weather-Dashboard/
+
 
