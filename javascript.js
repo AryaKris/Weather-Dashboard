@@ -94,8 +94,21 @@ function displayForecast(weatherData) {
     $("#current-humidity").append(humidity);
 
     var uvIndex = "UV Index : " + weatherData.current.uvi;
+    // if else conditions for showing the conditions are favorable, moderate, or severe
+    if (weatherData.current.uvi < 2) {
+        $("#current-uv").addClass ("btn-success");
+    }
+    else if (weatherData.current.uvi <= 5){
+        $("#current-uv").addClass("btn-warning");
+    } 
+    else if (weatherData.current.uvi >5){
+        $("#current-uv").addClass("btn-danger");
+    }
     $("#current-uv").empty();
     $("#current-uv").append(uvIndex);
+
+   
+
 
     $("#fivedayweather-container").show();
     // var futureWeather = $("#fivedayweather-container");
