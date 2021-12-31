@@ -28,6 +28,7 @@ function populateCityList() {
 
 $("#user-form").on("submit", searchWeatherApi);
 
+
 $("#city-list").on("click", "button", function (event) {
     event.preventDefault();
     var cityName = $(this).text();
