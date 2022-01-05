@@ -25,6 +25,6 @@ https://aryakris.github.io/Weather-Dashboard/
 
 ## 📝 License
 
-Copyright © 2021 [Avneesh Agarwal](https://github.com/AryaKris). <br />
+Copyright © 2021 [Arya Krishna](https://github.com/AryaKris). <br />
 This project is [MIT](https://github.com/AryaKris/Weather-Dashboard/blob/main/LICENSE) licensed.
 
