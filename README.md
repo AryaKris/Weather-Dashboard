@@ -18,7 +18,7 @@ The search history should be displayed as buttons below the search form and on c
 
 # Image 
 
-![alt text](https://github.com/AryaKris/Weather-Dashboard/blob/main/Screen%20Shot%202021-12-13%20at%2011.11.55.png)
+![alt text](https://github.com/AryaKris/Weather-Dashboard/blob/main/Screen%20Shot%202021-12-13%20at%2011.11.55.png?raw=true)
 
 # Link to deployed application 
 https://aryakris.github.io/Weather-Dashboard/
