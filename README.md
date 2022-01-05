@@ -23,4 +23,8 @@ The search history should be displayed as buttons below the search form and on c
 # Link to deployed application 
 https://aryakris.github.io/Weather-Dashboard/
 
+## 📝 License
+
+Copyright © 2021 [Avneesh Agarwal](https://github.com/AryaKris). <br />
+This project is [MIT](https://github.com/avneesh0612/next-progress-bar/blob/main/LICENSE) licensed.
 
